@@ -1,0 +1,7 @@
+.container {
+  padding: 0 16px;
+
+  @media (min-width: $desktop-breakpoint) {
+    padding: 50px 52px 0 91px;
+  }
+}

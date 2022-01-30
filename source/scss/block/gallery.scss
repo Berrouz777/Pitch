@@ -1,0 +1,143 @@
+.gallery__heading {
+  margin: 42px 0 7px 0;
+
+  @media (min-width: $tablet-breakpoint) {
+    margin-top: 45px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: 43px;
+  }
+}
+
+.gallery__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $desktop-breakpoint) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.gallery__item:not(:first-child) {
+  margin-top: 16px;
+
+  @media (min-width: $tablet-breakpoint) {
+    margin-top: 28px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: 0;
+  }
+}
+
+.gallery__link {
+  display: flex;
+  position: relative;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 5px;
+  overflow: hidden;
+
+  &:focus {
+    outline: 2px solid $sandy;
+    outline-offset: 3px;
+  }
+}
+
+.gallery__link:hover .gallery__img-container::after {
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+.gallery__img-container {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background-color: $bluesh_grey;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    height: 120px;
+    width: 100%;
+    bottom: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.2) 100%);
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    height: 287px;
+
+    &::after {
+      height: 150px;
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    width: 296px;
+    height: 160px;
+
+    &::after {
+      height: 100px;
+    }
+  }
+}
+
+.gallery__img-container img {
+  position: absolute;
+  width: 100%;
+
+  @media (min-width: $tablet-breakpoint) {
+    height: 287px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    width: 296px;
+    height: 160px;
+  }
+}
+
+.gallery__title {
+  @include font-rajdhani(24px, 400, 24px, $white);
+  position: absolute;
+  top: 83px;
+  left: 16px;
+  z-index: 2;
+  cursor: default;
+
+  @media (min-width: $tablet-breakpoint) {
+    @include font-rajdhani(40px, 400, 40px, $white);
+    top: 170px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    @include font-rajdhani(24px, 400, 24px, $white);
+    top: 85px;
+  }
+}
+
+.gallery__text {
+  @include font-rajdhani(14px, 700, 16px, rgba($white, 0.5));
+  position: absolute;
+  bottom: 10px;
+  left: 16px;
+  z-index: 2;
+  cursor: default;
+
+  @media (min-width: $tablet-breakpoint) {
+    @include font-rajdhani(18px, 400, 18px, rgba($white, 0.5));
+    letter-spacing: 0.2px;
+    bottom: 15px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    @include font-rajdhani(14px, 400, 16px, rgba($white, 0.5));
+    letter-spacing: 0.1px;
+    bottom: 10px;
+  }
+}

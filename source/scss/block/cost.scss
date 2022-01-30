@@ -1,0 +1,40 @@
+.cost {
+  margin-left: 60px;
+
+  @media (min-width: $tablet-breakpoint) {
+    margin-left: 126px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    margin-left: 70px;
+  }
+}
+
+.cost__title {
+  margin: 32px 0 6px 0;
+
+  @media (min-width: $tablet-breakpoint) {
+    margin-top: 30px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: 27px;
+  }
+}
+
+.cost__price {
+  @include font-rajdhani(40px, 500, 40px, $sandy);
+  margin: 0;
+  padding: 0;
+  cursor: default;
+
+  &--dollars {
+    margin-left: -9px;
+  }
+
+  &--dot,
+  &--cents {
+    @include font-rajdhani(28px, 500, 40px, $bluesh_grey);
+    margin-left: -10px;
+  }
+}

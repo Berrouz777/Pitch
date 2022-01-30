@@ -1,0 +1,27 @@
+.page {
+  @include font-rajdhani(16px, 400, 24px, $violet);
+  height: 100%;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  min-width: $mobile-min-width;
+  height: 100%;
+  background-color: $white;
+
+  @media (min-width: $desktop-breakpoint) {
+    // height: 768px;
+    flex-direction: row;
+    // overflow: hidden;
+  }
+}
+
+.main {
+  @media (min-width: $desktop-breakpoint) {
+    // height: 768px;
+    // overflow: scroll;
+  }
+}

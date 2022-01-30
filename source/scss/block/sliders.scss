@@ -1,0 +1,81 @@
+.sliders {
+  height: 600px;
+
+  @media (min-width: $desktop-breakpoint) {
+    height: 768px;
+  }
+}
+
+.sliders__button {
+  position: absolute;
+  display: block;
+  bottom: 29px;
+  left: 20px;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: $white;
+    top: 5px;
+    left: 13px;
+    border-radius: 10px;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 12px;
+    background-color: $white;
+    top: 12px;
+    left: 13px;
+    border-radius: 10px;
+    transform: rotate(-45deg);
+  }
+
+  &--next {
+    margin-left: 42px;
+    transform: rotate(180deg);
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    left: 56px;
+  }
+
+  &:hover {
+    outline: 2px solid $white;
+  }
+
+  &:active {
+    background-color: $white;
+
+    &::before,
+    &::after {
+      background-color: $bluesh_grey;
+    }
+  }
+}
+
+.sliders__pagination {
+  @include font-rajdhani(20px, 500, 32px, $white);
+  position: absolute;
+  left: 160px;
+  bottom: 20px;
+  width: 100px;
+  height: 40px;
+  cursor: default;
+
+  @media (min-width: $desktop-breakpoint) {
+    bottom: 25px;
+    left: 195px;
+  }
+}

@@ -1,0 +1,38 @@
+.quantity__title {
+  margin: 31px 0 13px 0;
+
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: 28px;
+  }
+}
+
+.quantity__button {
+  @include font-rajdhani(25px, 500, 28px, $violet);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 7px 0 -5px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    outline: 1px solid $bluesh_grey;
+  }
+
+  &:focus {
+    outline: 2px solid $sandy;
+  }
+}
+
+.quantity__current {
+  @include font-rajdhani(24px, 500, 24px, $bluesh_grey);
+  display: inline-block;
+  text-align: center;
+  width: 25px;
+  margin: 0 5px 0 -10px;
+  cursor: default;
+}

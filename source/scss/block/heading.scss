@@ -1,0 +1,5 @@
+.heading {
+  @include font-rajdhani(16px, 700, 24px, $bluesh_grey);
+  text-transform: uppercase;
+  cursor: default;
+}

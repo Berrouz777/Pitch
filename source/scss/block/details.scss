@@ -1,0 +1,146 @@
+.details__title {
+  margin-top: 7px;
+}
+
+.details__subtitle {
+  @include font-rajdhani(32px, 500, 32px, $violet);
+  margin: 15px 0 0 0;
+  cursor: default;
+
+  @media (min-width: $tablet-breakpoint) {
+    @include font-rajdhani(48px, 500, 56px, $violet);
+    margin-top: 17px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: 23px;
+  }
+}
+
+.details__text {
+  @include font-rajdhani(18px, 500, 28px, $bluesh_grey);
+  margin: 15px 20px 0 0;
+  cursor: default;
+
+  @media (min-width: $tablet-breakpoint) {
+    @include font-rajdhani(20px, 500, 32px, $bluesh_grey);
+    margin-right: 50px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    width: 400px;
+    margin: 13px 0 0 0;
+  }
+}
+
+.details__part1 {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 0;
+    background-color: $light_grey;
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    display: flex;
+    margin-top: 12px;
+
+    &::before {
+      top: -8px;
+    }
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: 10px;
+    &::before {
+      top: -2px;
+    }
+  }
+}
+
+.details__guide {
+  @include font-rajdhani(16px, 500, 24px, $sandy);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 25px;
+  margin-top: 24px;
+  border: 2px solid $sandy;
+  border-radius: 20px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $sandy;
+    color: $white;
+    transition: 0.5s;
+  }
+
+  &:active {
+    color: $bluesh_grey;
+  }
+
+  &:focus {
+    outline: 2px solid $sandy;
+    outline-offset: 3px;
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    margin: 48px 0 0 30px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    margin: 50px 0 0 18px;
+  }
+}
+
+.details__part2 {
+  display: flex;
+  position: relative;
+  padding-bottom: 17px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    background-color: $light_grey;
+  }
+}
+
+.details__button {
+  @include font_rajdhani(24px, 500, 32px, $white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 56px;
+  background-color: $violet;
+  margin-top: 40px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $violet_hover;
+    transition: 0.5s;
+  }
+
+  &:active {
+    background-color: $violet_active;
+    transition: 0.2s;
+  }
+
+  &:focus {
+    outline: 2px solid $sandy;
+    outline-offset: 3px;
+  }
+
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: 72px;
+  }
+}
