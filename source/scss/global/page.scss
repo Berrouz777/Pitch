@@ -13,15 +13,15 @@
   background-color: $white;
 
   @media (min-width: $desktop-breakpoint) {
-    // height: 768px;
+    height: 768px;
     flex-direction: row;
-    // overflow: hidden;
+    overflow: hidden;
   }
 }
 
 .main {
   @media (min-width: $desktop-breakpoint) {
-    // height: 768px;
-    // overflow: scroll;
+    height: 768px;
+    overflow: scroll;
   }
 }
