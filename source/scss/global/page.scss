@@ -13,7 +13,7 @@
   background-color: $white;
 
   @media (min-width: $desktop-breakpoint) {
-    height: 768px;
+    height: 100vh;
     flex-direction: row;
     overflow: hidden;
   }
@@ -21,7 +21,7 @@
 
 .main {
   @media (min-width: $desktop-breakpoint) {
-    height: 768px;
+    height: 100%;
     overflow: scroll;
   }
 }
